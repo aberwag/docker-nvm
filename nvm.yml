@@ -1,0 +1,10 @@
+node:
+  image: aberwag/nvm
+  hostname: nvm
+  environment:
+    - NODE_VERSION=4.4.0
+    - NPM_VERSION=3.8.0
+    - GIT_REPO=https://github.com/aberwag/node-helloworld.git
+    - NPM_CMD=npm start
+  ports:
+    - "8080:8080"
