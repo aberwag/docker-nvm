@@ -1,23 +1,13 @@
 #!/usr/bin/env bash
 
-if [ which nvm ]; then
-  echo "else nvm: #####################################"
-else
-  echo "nvm configuration"
-  . ~/.nvm/nvm.sh
-fi
+echo "nvm configuration"
+. ~/.nvm/nvm.sh
 
-if [ which node ]; then
-  echo "install node v${NODE_VERSION}"
-  nvm install ${NODE_VERSION}
-fi
+echo "install node v${NODE_VERSION}"
+nvm install ${NODE_VERSION}
 
-if [ "v${NODE_VERSION}" eq $(node -v) ]; then
-  echo "eq ## ${NODE_VERSION} eq $(node -v)"
-else
-  echo "else ## ${NODE_VERSION} eq $(node -v)"
-  nvm install ${NODE_VERSION}
-fi
+echo "else ## ${NODE_VERSION} eq $(node -v)"
+nvm install ${NODE_VERSION}
 
 nvm alias default ${NODE_VERSION}
 
