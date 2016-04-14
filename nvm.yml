@@ -1,4 +1,4 @@
-node:
+nvm:
   image: aberwag/nvm
   hostname: nvm
   environment:
@@ -7,4 +7,4 @@ node:
     - GIT_REPO=https://github.com/aberwag/node-helloworld.git
     - NPM_CMD=npm start
   ports:
-    - "8080:8080"
+    - "1337:1337"
